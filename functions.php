@@ -15,6 +15,6 @@ function my_theme_enqueue_styles() {
 		array( $parenthandle ),
 		$theme->get( 'Version' ) // This only works if you have Version defined in the style header.
 	);
-	$my_js_ver  = date("ymd-Gis", filemtime( get_stylesheet_directory_uri().'/build/main.js'));
-	wp_enqueue_script( 'main-child', get_stylesheet_directory_uri().'/build/main.js', array(), $my_js_ver );
+	$my_js_ver  = date("ymd-Gis", filemtime( get_stylesheet_directory_uri().'/dist/main.js'));
+	wp_enqueue_script( 'main-child', get_stylesheet_directory_uri().'/dist/main.js', array(), $my_js_ver );
 }
